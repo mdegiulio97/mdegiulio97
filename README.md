@@ -1,49 +1,33 @@
-## Hi, I'm Michele De Giulio 👋
+## Michele Maria De Giulio
 
-**PhD student @ Università Cattolica del Sacro Cuore (UNICATT) · MSc in Biomedical Engineering**
+PhD student at Università Cattolica del Sacro Cuore (Rome) · MSc in Biomedical Engineering
 
-I build **methodologically rigorous machine learning for biomedical and clinical imaging** — from physics-informed models and phasor signal analysis to explainable, uncertainty-aware clinical classifiers.
+I build machine learning and physics-based models for medical imaging: physics-informed networks for quantitative MRI, Monte Carlo dosimetry, and clinical classifiers that report their uncertainty. Each project is evaluated against an explicit baseline, on data split so that no patient or subject appears in both training and test, with the limitations stated in the README.
 
-My through-line is *breadth as depth*: **one technique, one clean and reproducible project, always compared against an honest baseline** — with the limitations stated up front.
+### Research and physics
 
----
-
-### 🔬 Research interests
-
-- **Physics-informed & Scientific ML (SciML)** — embedding forward physical models into learning (qMRI relaxometry, Bloch dynamics)
-- **Phasor analysis** — fit-free signal decomposition for MRI and FLIM microscopy
-- **Digital twins** of metabolism and disease progression — cross-scale, physics-grounded modelling
-- **Trustworthy clinical ML** — calibration, uncertainty quantification, explainability
-- **GenAI & RAG** for clinical / radiology text
-
----
-
-### 🧪 Clinical ML Portfolio
-
-One technique per repository — reproducible (`uv` + locked dependencies + fixed seeds), tested (CI: `ruff` + `pytest`), and evaluated against a baseline.
-
-| Project | Technique | In short |
+| Project | What it is | Key result |
 |---|---|---|
-| [genai-mri-superres](https://github.com/mdegiulio97/genai-mri-superres) | GenAI / image-to-image | MRI super-resolution (ESPCN/SRCNN) vs bicubic — PSNR/SSIM |
-| [pinn-qmri](https://github.com/mdegiulio97/pinn-qmri) | Physics-Informed NN | Unsupervised T2 relaxometry vs per-pixel least-squares |
-| [cxr-xai-uncertainty](https://github.com/mdegiulio97/cxr-xai-uncertainty) | XAI + uncertainty | Explainable chest-X-ray classifier: MC-Dropout, calibration, Grad-CAM |
-| [rag-radiology-reports](https://github.com/mdegiulio97/rag-radiology-reports) | RAG / NLP | Local, offline RAG over radiology reports with source citations |
-| [phasor-flim-explorer](https://github.com/mdegiulio97/phasor-flim-explorer) | Signal processing | Fit-free phasor analysis and unmixing of FLIM data |
-| [Parkinson-Classificator](https://github.com/mdegiulio97/Parkinson-Classificator) | Classification | Parkinson's detection from voice measures — 3 models vs baseline |
-| [Health-Insurance](https://github.com/mdegiulio97/Health-Insurance) | Regression | Medical-cost prediction — linear + ensemble vs baseline |
+| [pinn-qmri](https://github.com/mdegiulio97/pinn-qmri) | Unsupervised physics-informed network for T2/T2* relaxometry vs per-pixel least squares | Real multi-echo brain MRI (OpenNeuro ds007116): held-out-echo NRMSE 0.075 vs 0.100 |
+| [g4-brain-dosimetry](https://github.com/mdegiulio97/g4-brain-dosimetry) | Geant4 Monte Carlo photon dosimetry on MRI-derived brain phantoms, atlas-based regional dose (C++ / Python) | 6 MV water depth dose vs BJR-25: gamma (2%/2 mm) pass rate 100% |
 
-▶ Start here: **[clinical-ml-portfolio](https://github.com/mdegiulio97/clinical-ml-portfolio)** (portfolio overview) · reusable base: [ml-clinical-template](https://github.com/mdegiulio97/ml-clinical-template)
+### Applied ML for medical imaging
 
----
+| Project | What it is | Key result |
+|---|---|---|
+| [medical-xai-uncertainty](https://github.com/mdegiulio97/medical-xai-uncertainty) | ResNet18 with MC-Dropout uncertainty, temperature scaling and Grad-CAM | Brain MRI glioma vs non-glioma, split by patient (233 patients): AUROC 0.961 vs 0.881 baseline |
+| [genai-mri-superres](https://github.com/mdegiulio97/genai-mri-superres) | ESPCN/SRCNN image super-resolution vs bicubic | Real T1w brain MRI, held-out subject: +0.52 dB PSNR |
+| [phasor-flim-explorer](https://github.com/mdegiulio97/phasor-flim-explorer) | Fit-free phasor analysis and unmixing of FLIM data vs NNLS fitting | Lower unmixing error than NNLS at every photon count, ~32× faster (synthetic ground truth) |
+| [rag-radiology-reports](https://github.com/mdegiulio97/rag-radiology-reports) | Local, offline retrieval-augmented generation over radiology reports with source citations | Functional check on a synthetic corpus |
 
-### 🛠️ Tools
+Shared base: [ml-clinical-template](https://github.com/mdegiulio97/ml-clinical-template) (uv + locked dependencies + ruff/pytest CI). Overview: [clinical-ml-portfolio](https://github.com/mdegiulio97/clinical-ml-portfolio).
 
-`Python` · `PyTorch` · `scikit-learn` · `NumPy` / `SciPy` · `JAX` · `Streamlit` · `uv` · `Geant4` · `Git` / GitHub Actions
+University coursework (archived): [parkinson-voice-classifier](https://github.com/mdegiulio97/parkinson-voice-classifier) (subject-level evaluation and why record-level splits leak) · [Health-Insurance](https://github.com/mdegiulio97/Health-Insurance) (regression with a baseline).
 
----
+### Tools
 
-### 📫 Contact
+Python · PyTorch · scikit-learn · NumPy / SciPy · Geant4 (C++) · Streamlit · uv · Git / GitHub Actions
 
-- 📧 byome@chirale.it
+### Contact
 
-> *A principle I hold across everything I ship: reproducible pipelines, honest baselines, and limitations stated up front.*
+mdegiulio97@gmail.com · [LinkedIn](https://www.linkedin.com/in/michele-maria-de-giulio-528881208)
