@@ -15,7 +15,7 @@ I build machine learning and physics-based models for medical imaging: physics-i
 
 | Project | What it is | Key result |
 |---|---|---|
-| [medical-xai-uncertainty](https://github.com/mdegiulio97/medical-xai-uncertainty) | ResNet18 with MC-Dropout uncertainty, temperature scaling and Grad-CAM | Brain MRI glioma vs non-glioma, split by patient (233 patients): AUROC 0.961 vs 0.881 baseline |
+| [medical-xai-uncertainty](https://github.com/mdegiulio97/medical-xai-uncertainty) | ResNet18 with MC-Dropout uncertainty, temperature scaling and Grad-CAM | Brain MRI glioma vs non-glioma, split by patient (209 patients): AUROC 0.942 vs 0.846 baseline |
 | [genai-mri-superres](https://github.com/mdegiulio97/genai-mri-superres) | ESPCN/SRCNN image super-resolution vs bicubic | Real T1w brain MRI, held-out subject: +0.52 dB PSNR |
 | [phasor-flim-explorer](https://github.com/mdegiulio97/phasor-flim-explorer) | Fit-free phasor analysis and unmixing of FLIM data vs NNLS fitting | Lower unmixing error than NNLS at every photon count, ~32× faster (synthetic ground truth) |
 | [rag-radiology-reports](https://github.com/mdegiulio97/rag-radiology-reports) | Local, offline retrieval-augmented generation over radiology reports with source citations | Functional check on a synthetic corpus |
