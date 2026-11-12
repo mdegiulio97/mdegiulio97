@@ -2,7 +2,7 @@
 
 PhD student at Università Cattolica del Sacro Cuore (Rome) · MSc in Biomedical Engineering
 
-I build machine learning and physics-based models for medical imaging: physics-informed networks for quantitative MRI, Monte Carlo dosimetry, and clinical classifiers that report their uncertainty. Each project is evaluated against an explicit baseline, on data split so that no patient or subject appears in both training and test, with the limitations stated in the README.
+I build machine learning and physics-based models for medical imaging: physics-informed networks for quantitative MRI, Monte Carlo dosimetry, mechanistic disease models, and clinical classifiers that report their uncertainty. Each project is evaluated against an explicit baseline, on data split so that no patient or subject appears in both training and test, with the limitations stated in the README.
 
 ### Research and physics
 
@@ -10,6 +10,7 @@ I build machine learning and physics-based models for medical imaging: physics-i
 |---|---|---|
 | [pinn-qmri](https://github.com/mdegiulio97/pinn-qmri) | Unsupervised physics-informed network for T2/T2* relaxometry vs per-pixel least squares | Real multi-echo brain MRI (OpenNeuro ds007116): held-out-echo NRMSE 0.075 vs 0.100 |
 | [g4-brain-dosimetry](https://github.com/mdegiulio97/g4-brain-dosimetry) | Geant4 Monte Carlo photon dosimetry on MRI-derived brain phantoms, atlas-based regional dose (C++ / Python) | 6 MV water depth dose vs BJR-25: gamma (2%/2 mm) pass rate 100% |
+| [frda-bioenergetic-model](https://github.com/mdegiulio97/frda-bioenergetic-model) | Mechanistic ODE model of Friedreich's ataxia cell bioenergetics and a JAX cross-scale progression model | Calibration on published data, profile-likelihood identifiability, value-of-information acquisition design |
 
 ### Applied ML for medical imaging
 
@@ -26,7 +27,7 @@ University coursework (archived): [parkinson-voice-classifier](https://github.co
 
 ### Tools
 
-Python · PyTorch · scikit-learn · NumPy / SciPy · Geant4 (C++) · Streamlit · uv · Git / GitHub Actions
+Python · PyTorch · JAX · scikit-learn · NumPy / SciPy · Geant4 (C++) · Streamlit · uv · Git / GitHub Actions
 
 ### Contact
 
